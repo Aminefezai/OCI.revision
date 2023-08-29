@@ -1,0 +1,31 @@
+terraform is a tool for infrastructure as a code qui consiste a définir sur le cloud ou en local des ressources ( serveurs, database..) dans un fichier de config.
+Terraform c'est un open source qui fonctionne avec tout les cloud provider  , developpé par Hashicorp avec le language GO.
+Etape de fonctionnement ; write file configuration ( mettre en place les ressources souhaité)-->plan :il crée un plan d'exécution pour la création de cette infras-->apply si c ok.
+Dans l'étape Plan : Terraform vérifie s'il n y a pas de prob de création , mise à jours ou suppression d'une infras deja existante.
+Utilise le language de programmation HCL ( hashicorp configuration language ) qui est facile à comprendre par tout les cloud provide (language de prog declarative)
+HCL : utilise un language de prog declarative : concentré sur qu'est ce qui va se passé à la fin du processus.
+HCL -->state ( ressource metadatda)-->core application qui communique avec les API des provider.
+Benefique de Terraform : il manage tout les infrastructures sur multiple plateforme cloud vu que le HCL est compris au niveau de ces derniers, tracking de l'infrastructure
+automatisation des changements, language simple à lire par le dev, version control : collaborer et partager ce fichier de config avec d'autres sur le cloud.
+la configuration du fichier HCL se fait après le provisionning( tzawed l'infrastr bel srever w networks)
+tnajam tu definis des actions bech thez image mel infra ancienne w ta3mel replic 3leha fi cloud e5er) et s'assurer que l'accès est bon pour les users et systems lel data w ressources.
+
+el configuration management c'est le fait de configurer ale serveur  provisionner
+( exp l'installation et l'automatisation d'une appl tel que ngnix fi serveur en utilisant chef ou ansible( scipt da5lou bech tsir l'automatisation de config)
+l'installation de tout les dépendances de l'application sur tout les serveurs la ou l'applications existes, s'il est nécessaires de mettre à jour une dépendence ceci doit etre fait
+sur tout les serveurs dont l'application existe ( on peut également autmatisé ca avec chef ou ansible)
+
+Ansible VS Terraform ( ansible supporte les infrastructure mutable alors que terraform supporte que les infstructure immutable)
+ansible supporte le ssh en faisant des modif telque (des mises à jours de versions docker par exp) tandis que terraform fonctionne avec les API du fournisseur cloud et demande 
+la destruction et le reprovisionnement avec une image docker recente.
+ansible language procédural ( alors que terraform declaratif ) il declare qque chose pour au final aura qque chose.
+Avec ansible on définit des étapes qu'on souhaite suivre alors qu'avec terraform on définit l'aspect dee l'infrastructure et celle ci sera determiné.
+
+CM ou config Mangement ; exp si on veut changer la version de docker , ansible prend en charge de tester l'application dans cette nouvelle version , il documente cette modif
+et publiera en tant que nouvelle version de l'infrastr et finalement intégrera cette nouvelle version dans l'environnement cible (prod)
+
+Playbooks : c'est une serie de lecture ds un fichier YAML qui contient plusieurs commandes à exécuter ( ceci est utlisé car parfois nous avons besoin de créer plusieurs taches sur plusisuers serveurs)
+les inventaires sont les noeuds ou serveurs la ou on va appliquer plusieurs processus .
+un role définit un ou plusieurs taches, un palybook peut etre divisé en plusieurs roles.
+
+ 

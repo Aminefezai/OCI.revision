@@ -29,4 +29,10 @@ les inventaires sont les noeuds ou serveurs la ou on va appliquer plusieurs proc
 un role définit un ou plusieurs taches, un palybook peut etre divisé en plusieurs roles.
 
 OCID : oracle cloud ID d'une ressource ou oracle cloud ID d'un user existant.
+
+
+pour centraliser le contenu (création de pile "stack")
+1/ introduire le fichier de config terraform dans Github
+2/créer une pile ( stack) dans "ressource manager" via la consolde qui permet de gérer l'infra
+action sur la console : developer service-->ressource manager-->stacks-->create stack
  

@@ -1,0 +1,25 @@
+Container registry ( fama docker hub w famma OCI container registry qui stock , partage et gère les images docker)
+OKE cluster kubernites offert par OCI pour deployer l'application dejà contenairisé .
+
+architecture des microservices :
+le déployement des petits applications se fait d'une manière indépendantes entre les microservices qui communiquent généralement via des API 
+l'architecture microservices permet aux devs d'utiliser plusieurs languages de prog et des dépendances diff vu que tout est séparé.
+loosley( faiblement) couplé qui permet l'isolement à d'autres services ce qui rend l SAV et la performance plus efficace en accédant directement juste aus ervice en question.
+le deploiyement se fait d'une manière indépendante.
+il n'est pas nécessaire de modifier et redeployer la totalité de l'appli lorsqu'une modif est requise dans une partie (easy to maintain)
+easy scalable and highly available ( c'est facile à faire évoluer et permettent un accès rapide)
+Load balancer ( methode utilisé pour assurer une haute disponibilité de microservices
+tolérance à la panne ( en cas d'un service qui est en panne , lapplication va continuer à tourner)
+la couche API est l'ntrée de tte les demandes clients , c'est elle qui permet aux microservice de communiquer entre eux via un protocole
+chaque MS est excusé dans un cconeteneur qui fournit un environnement léger, ceci est scalable selon les ddes utilisateurs et géré par kuber.
+
+l'architure monolitique présente un grand risque si un service tombe en panne l'appli va s'arreter.
+reuse fonctionnalities ( reutilisation des fonctionnalité) , limité pour l'arch monolitique
+microservice utilise le REST API API calls) basé sur  un prtocole HTTP pour la communication des services de l'appli, alors que l'autre utilise des prcédure interne.
+(fucntion calls)
+microse plus flexible, les services sont écrit avec plusieurs languages et framework , alors que l'autre avec un seul language.
+MS ; data management decentralized, chaque service gère son data alors que MO centralized ; une seule base.
+MS deployement independently , chaque service est codé deployé seul, alors que MO ddendently ( en integralité)
+MS easier to maintain , MO complex to maintain
+MS tolérance au panne (resiliency) High , MO low resiliency
+MS scalability possible pour chaque MS alors que pour le MO la scalabilité possible que pour toute l'appli.

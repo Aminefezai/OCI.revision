@@ -28,4 +28,5 @@ Playbooks : c'est une serie de lecture ds un fichier YAML qui contient plusieurs
 les inventaires sont les noeuds ou serveurs la ou on va appliquer plusieurs processus .
 un role définit un ou plusieurs taches, un palybook peut etre divisé en plusieurs roles.
 
+OCID : oracle cloud ID d'une ressource ou oracle cloud ID d'un user existant.
  

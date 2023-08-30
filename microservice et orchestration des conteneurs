@@ -38,5 +38,12 @@ cela facilite les mises à jours de config séparemment sans toucher au code. no
 5/Build : créer , release : publier  and run ; exécuter : on peut utiliser les outils de CI/CD pour automatiser ces actions .
 les images dockers doivent etre créer à partir de chaque commit( validation). on les utilsent ensuite comme un artifact de deployement ensuite.
 6/ processes : utiliser redis ou data store pour stocker l'état de de MS pour la maintenance en cas de panne ( a revoir)
+7/port Binding ou liaison de port : il faut autoriser l'accès aux données persistants appartenant à un service uniquement par le biais des API services.
+8/ concurrency : scalability horisontal ( création des instances de l'application)
+9/disposabilityc: le systeme ne doit pas etre impacté si des instances ont été ajouté ou d'autres existance s'arrete( le service doit etre tjr fonctionnel)
+10/developpement and production parity :garder la phase dev et staging et production assez similaire pour ne pas avoir des beug ensuite( utilisation des conteneurs pour garder le meme environnement).
+11/ le journal ( logs) le comportement d'une application qui est en cours d'exécution cela permettra d'aller au cible en cas de beug.
+(l'observabilité et la surveillance) est nécessaire dans ce cas.
+12/Admin processes: processus d'administration : l'idée est de séparé les taches d'administration ( comme l' nettyoage des données) au reste de l'appli afin d'éviter l'une des taches à provoquer une anomalie lors de l'exc de l'apppli.
 
 

@@ -4,3 +4,4 @@ pouquoi utilisé terraform sur le cloud et non en local?
 bloc CIDR c'est quoi 
 
 communication sychrone ou asynchrone comment choisir et comment le mettre en place techniquemntn
+6/ processes : utiliser redis ou data store pour stocker l'état de de MS pour la maintenance en cas de panne a revoir ..

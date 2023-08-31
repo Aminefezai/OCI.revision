@@ -1,1 +1,26 @@
+les composants de docker :
+1/docker client : les commande build, run , pull se fait par le biais du docker client .
+2/docker deamon ( moteur docker) c'est celui qui va exécuter les commande c'est un hote ( serveur) qui pourra etre installé sur la meme machine clt 
+ou a distance
+3/docker registry : sur lequel on peut stocker et télécharger des images docker ( public docker hub) il a aussi le privé qu'on pourra l'utilisé.
+Commandes docker :
+docker run "image name" :pour la création et l'exécution d'un conteneur.
+docker start, stop, restard non du conteneur ou ID
+docker inspect "non duc conteneur ou ID"-->information sur les coneteneurs.
+docker logs.. ya3tik journal du log d'un conyeneur.
+docker ps ; ya3tik les conteneur qui sont en cours d'exécution 
+docker rm pour la suppression.
 
+OCIR : service proposé par oracle , c'est un registre de conteneurs ,  la ou on peut héberger notre resgistre public ou privé.
+OCI est préconfiguré avec docker via le cloud shell
+**working with docker file :
+
+le docker file ; 
+c'est un document qui définit le docker image , donc pour la création de l'image il nous faut un docker file
+La commande WORKDIR permet de définir le répertoire de travail d’un conteneur Docker à un moment donné. La commande est spécifiée dans le Dockerfile.
+Le mot-clé FROM permet d'indiquer sur quelle image de base nous construirons notre propre image personnalisée.
+RUN lance une ou plusieurs commandes Linux pendant la phase de construction de notre image.
+ADD et COPY permettent de copier un dossier et/ou des fichiers qui se trouvent dans notre machine locale vers le conteneur
+L'instruction VOLUME permet de créer automatiquement un répertoire dans la machine locale et le conteneur qui seront liés. Celui-ci sera automatiquement supprimé à la destruction du conteneur.
+Expliquons ce que WORKDIR va produire. En quelque sorte cette instruction est un équivalent de la commande cd qui nous permet d'accéder à un dossier.
+Par conséquent, au lancement du conteneur, nous serons positionner dans le dossier /nom. Pareillement les instructions RUN, ENTRYPOINT, COPY, ADD et CMD seront exécutées à partir de répertoire sélectionné dans WORKDIR.

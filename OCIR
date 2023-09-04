@@ -1,0 +1,24 @@
+nous pouvons créer 500 referenciels dans chaque région OCI soit un total de 400Go et chaque referenciel peut contenir 100000 images à la fois.
+docker image c'est une image en lecture seule , contient l'appli qu'elle sera exécuter dans un contenaire et ces dependences.
+compartiment (prod, dev, test) peut contenir plusieurs sous compartiments et se trouve dans une région ( zonne géographique).
+Tenacy namespace , c'est un espace de nom unique pour un locataire qui permet de créer un espace de stockage privé , qui se créer automatiquement en créant un repository
+region key c'est la région ou se situe notre registre (nom de la region.ocir.io)
+repository name : nom de dépot qui existe dans le registre exp projet1/acme-web-app
+registry identifier : c'est l'identifiant unique de registre exp iad.ocir.io/abcdgsteio -->region key/tenacy name space
+tag : version de l'image exp 4.2.1
+image name : nom de repository:tag exp projet1/amce-web-app:4.2.1
+image path: region key/tenacy name space/repository name:tag
+remarque : pour créer un tanacy name space , il faut crée un compartiement qui va contenir nos ressources y compris les images docker
+la tenacy namespace se crée automatiquement en créant le repository.
+chaque compartiment OCI à un tenacy namespace
+OCIR c'est le service oracle qui va héberger nos dépots et qui est indépendant des compartiement, on a pas besoin de le deployer nous meme.
+si nous souhaitons tager une image qui se trouve en loca ( nom de l'ancienne image:tag nom de la nouvelle image:tag)
+exp docker tag ngenix:latest  us.phonix.ocir.io(region)/agbdggei(tenacy)/projet1/web-app:v1
+pour pousser cette image vers le rep  docker push us.phonix.ocir.io/aghdhht/projet1-web-app:v1
+pour effectuer le pull ou le push depuis OCIR , il faut avoir un token ( jeton d'authent) qui va servir à gérer les droit d'accer de l'utilisateur 
+et effectuer la traçabilité des actions effectué (heure et date , username..)
+pour avoir un token , il faut d'abord accéder à OCI console ensuite à IAM( identify and access management) -->auth tocken-->créer un tocken
+on utilise ensuite le cloud shell , docker login region key ou nom de registre (phx) exemple pour accéder àu container registry, on peut extraire le code region du doc oracle
+il te demande username -->/username dans votre location, password *--> jeton généré-->je serait conn a mon OCIR
+plusieurs repository peuvent correspondrent à un seul tenancy namespace ( un repository contient une image à plusieurs versions)
+on peut appliquer des policies sur les images pur les annuler s'ils ne seront pas (pull) pendant  10 jrs par exp ( service proposé)

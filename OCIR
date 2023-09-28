@@ -20,5 +20,5 @@ et effectuer la traçabilité des actions effectué (heure et date , username..)
 pour avoir un token , il faut d'abord accéder à OCI console ensuite à IAM( identify and access management) -->auth tocken-->créer un tocken
 on utilise ensuite le cloud shell , docker login region key ou nom de registre (phx) exemple pour accéder àu container registry, on peut extraire le code region du doc oracle
 il te demande username -->/username dans votre location, password *--> jeton généré-->je serait conn a mon OCIR
-plusieurs repository peuvent correspondrent à un seul tenancy namespace ( un repository contient une image à plusieurs versions)
+chaque repository correspond à un seul tenancy namespace ( un repository contient une image à plusieurs versions)
 on peut appliquer des policies sur les images pur les annuler s'ils ne seront pas (pull) pendant  10 jrs par exp ( service proposé)
